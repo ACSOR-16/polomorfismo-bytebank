@@ -1,4 +1,5 @@
 public class Gerente extends Funcionario {// con la palabra extends se hereda la clase padre
+    //  Extedens para extender o seleccionar clase madre
     private String clave;
 
     public void setClave(String clave){
@@ -12,7 +13,9 @@ public class Gerente extends Funcionario {// con la palabra extends se hereda la
         return clave == "Willfredo";
     }
 
+    // sobrescritura de metodo
     public double getBonificacion() {
-        return super.getSalario();
+        System.out.println("Ejecutando test Gerente");
+        return super.getSalario() + super.getBonificacion();
     }
 }
