@@ -1,4 +1,4 @@
-public class Gerente extends Funcionario {
+public class Gerente extends Funcionario {// con la palabra extends se hereda la clase padre
     private String clave;
 
     public void setClave(String clave){
@@ -10,5 +10,9 @@ public class Gerente extends Funcionario {
 
     public boolean inciarSesion(String clave){
         return clave == "Willfredo";
+    }
+
+    public double getBonificacion() {
+        return super.getSalario();
     }
 }
