@@ -1,10 +1,10 @@
-public class Funcionario {
+public class Gerente {
     private String nombre;
     private String documento;
     private double salario;
-    private int tipo;   
+    //private double bonificacion;   
 
-    public Funcionario() {
+    public Gerente() {
 
     }
 
@@ -14,14 +14,12 @@ public class Funcionario {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
     public String getDocumento() {
         return documento;
     }
     public void setDocumento(String documento) {
         this.documento = documento;
     }
-    
     public double getSalario() {
         return salario;
     }
@@ -29,20 +27,4 @@ public class Funcionario {
         this.salario = salario;
     }
 
-    public double getBonificacion() {
-        if (this.tipo == 0) {
-            return this.salario * 0.1;   
-        } else if (this.tipo == 1) {
-            return this.salario;   
-        } else {
-            return 0;
-        }
-    }
-
-    public int getTipo() {
-        return tipo;
-    }
-    public void setTipo(int tipo) {
-        this.tipo = tipo;
-    }
 }
