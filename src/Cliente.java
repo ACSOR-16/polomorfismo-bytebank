@@ -1,8 +1,10 @@
-public class Cliente {
+public class Cliente implements Auntentificador{
     
     private String telefono;
     private String nombre;
     private String documento;
+
+    private String clave;
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
@@ -23,5 +25,15 @@ public class Cliente {
     }
     public String getDocumento() {
         return documento;
+    }
+    
+    @Override
+    public boolean inciarSesion(String clave) {
+        return this.clave == clave;
+    }
+    @Override
+    
+    public void setClave(String clave) {
+        this.setClave(clave);
     }
 }

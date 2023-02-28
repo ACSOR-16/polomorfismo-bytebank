@@ -12,7 +12,6 @@ public class TestReferencias {
         oscar.setClave("Willfredo");
         //carlitos.inciarSesion();// la referencia es de tipo generico
 
-        System.out.println(oscar.getClave());
         System.out.println(oscar.inciarSesion("Willfredo"));
     }
 }

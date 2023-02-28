@@ -1,21 +1,17 @@
-public class Gerente extends Funcionario {// con la palabra extends se hereda la clase padre
+public class Gerente extends Funcionario implements Auntentificador{// con la palabra extends se hereda la clase padre
     //  Extedens para extender o seleccionar clase madre
-    private String clave;
-
-    public void setClave(String clave){
-        this.clave = clave;
-    }
-    public String getClave() {
-        return clave;
-    }
-
-    public boolean inciarSesion(String clave){
-        return clave == "Willfredo";
-    }
-
     // sobrescritura de metodo
     public double getBonificacion() {
         System.out.println("Ejecutando test Gerente");
         return super.getSalario() + (super.getSalario() * 0.5);
+    }
+
+    @Override
+    public void setClave(String clave) {
+    }
+
+    @Override
+    public boolean inciarSesion(String clave) {
+        return false;    
     }
 }

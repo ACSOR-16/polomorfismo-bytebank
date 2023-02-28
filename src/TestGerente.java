@@ -9,7 +9,6 @@ public class TestGerente {
           
         System.out.println(gerente.getSalario());
         System.out.println(gerente.getBonificacion());
-        System.out.println(gerente.getClave());
         System.out.println(gerente.inciarSesion("Willfredo"));
     }
 }
