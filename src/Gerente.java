@@ -16,6 +16,6 @@ public class Gerente extends Funcionario {// con la palabra extends se hereda la
     // sobrescritura de metodo
     public double getBonificacion() {
         System.out.println("Ejecutando test Gerente");
-        return super.getSalario() + super.getBonificacion();
+        return super.getSalario() + (super.getSalario() * 0.5);
     }
 }

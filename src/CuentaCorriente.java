@@ -11,6 +11,6 @@ public class CuentaCorriente extends Cuenta{
 
     @Override
     public void depositar(double valor) {
-        super.depositar(valor);
+        this.saldo = this.saldo + valor;
     }
 }
