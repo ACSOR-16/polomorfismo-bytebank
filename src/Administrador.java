@@ -1,8 +1,9 @@
 public class Administrador extends Funcionario implements Auntentificador  {
 
-    private String clave;
-
+    private AutentificadorUtil util;
+    
     public Administrador() {
+        this.util = new AutentificadorUtil();
     }
 
     @Override
@@ -11,16 +12,12 @@ public class Administrador extends Funcionario implements Auntentificador  {
     }
 
     @Override
-    public void setClave(String clave) {
-       this.clave = clave;
+    public boolean inciarSesion(String clave) {
+        return this.util.inciarSesion(clave);
     }
 
     @Override
-    public boolean inciarSesion(String clave) {
-        if (this.clave == clave) {
-            return true;
-        } else {
-            return false;
-        }
+    public void setClave(String clave) {
+        this.setClave(clave);
     }
 }

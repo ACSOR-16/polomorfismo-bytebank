@@ -4,7 +4,11 @@ public class Cliente implements Auntentificador{
     private String nombre;
     private String documento;
 
-    private String clave;
+    private AutentificadorUtil util;
+
+    public Cliente() {
+        this.util = new AutentificadorUtil();
+    }
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
@@ -29,10 +33,10 @@ public class Cliente implements Auntentificador{
     
     @Override
     public boolean inciarSesion(String clave) {
-        return this.clave == clave;
+        return this.util.inciarSesion(clave);
     }
+
     @Override
-    
     public void setClave(String clave) {
         this.setClave(clave);
     }
